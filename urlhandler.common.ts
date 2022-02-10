@@ -6,7 +6,7 @@ let URL_HANDLER_CB: UrlHandlerCallback;
  * @param urlParam to parse
  * @returns AppURL object or null if invalid was used
  */
-export function extractAppURL(urlParam: any): AppURL {
+export function extractAppURL(urlParam: any): AppURL|null {
     if (!!urlParam) {
         let url = urlParam.toString(),
             params = new Map<string, string>(),

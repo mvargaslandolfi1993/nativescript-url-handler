@@ -1,4 +1,5 @@
 
+// @ts-ignore
 import * as application from '@nativescript/core/application';
 import { getCallback, extractAppURL } from './urlhandler.common';
 export { handleOpenURL } from './urlhandler.common';
@@ -29,7 +30,7 @@ export function handleIntent(intent: any) {
     }
 
 }
-application.android.on(application.AndroidApplication.activityNewIntentEvent, (args) => {
+application.android.on(application.AndroidApplication.activityNewIntentEvent, (args: any) => {
     setTimeout(() => {
         let intent: android.content.Intent = args.activity.getIntent();
         try {

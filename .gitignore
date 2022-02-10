@@ -62,8 +62,6 @@ __build__/**
 .idea/
 *.swp
 *.tgz
-*.js
-*.js.map
 *.ngsummary.json
 
 !index.d.ts

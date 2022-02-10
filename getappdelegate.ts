@@ -1,4 +1,5 @@
-import * as application from 'application';
+// @ts-ignore
+import * as application from '@nativescript/core/application';
 
 /**
  * The following function is part of the NativeScript plugin: nativescript-plugin-firebase

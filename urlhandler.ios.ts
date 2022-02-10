@@ -4,7 +4,7 @@ export { handleOpenURL } from './urlhandler.common';
 
 export const appDelegate = getAppDelegate();
 
-function enableMultipleOverridesFor(classRef, methodName, nextImplementation) {
+function enableMultipleOverridesFor(classRef:any, methodName:any, nextImplementation:any) {
     const currentImplementation = classRef.prototype[methodName];
     classRef.prototype[methodName] = function () {
         const result = currentImplementation && currentImplementation.apply(currentImplementation, Array.from(arguments));
@@ -16,7 +16,6 @@ enableMultipleOverridesFor(
     appDelegate,
     'applicationOpenURLOptions',
     function (
-        application: UIApplication,
         url: NSURL,
         options: any
     ): boolean {
@@ -38,7 +37,6 @@ enableMultipleOverridesFor(
     appDelegate,
     'applicationContinueUserActivityRestorationHandler',
     function (
-        application: UIApplication,
         userActivity: NSUserActivity
     ): boolean {
         if (userActivity.activityType === NSUserActivityTypeBrowsingWeb) {

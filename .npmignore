@@ -11,7 +11,7 @@ Jenkinsfile
 *.jpg
 *.png
 *.log
-!*.ts
+*.ts
 !*.d.ts
 target/
 test/
